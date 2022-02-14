@@ -33,6 +33,10 @@ class Test_Password_Validator(TestCase):
         password = "ABCDEFGH"
         self.assertTrue(check_pwd(password))
 
+    def test_lowercase(self):
+        password = "abcdefgh"
+        self.assertTrue(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
