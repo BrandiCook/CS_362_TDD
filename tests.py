@@ -25,6 +25,10 @@ class Test_Password_Validator(TestCase):
         password = "abcdefg"
         self.assertFalse(check_pwd(password))
 
+    def test_len_21(self):
+        password = "abcdefghijklmnopqrstu"
+        self.assertFalse(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
