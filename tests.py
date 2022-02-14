@@ -34,13 +34,13 @@ class Test_Password_Validator(TestCase):
         password = "ABCDEFGH"
         self.assertFalse(check_pwd(password))
 
-
-"""
     # made false because not contain uppercase
     def test_lowercase(self):
         password = "abcdefgh"
         self.assertTrue(check_pwd(password))
-        
+
+
+"""  
     def test_symbols(self):
         password = "~`!@#$%^&*()_+-="  # 16 chars
         self.assertTrue(check_pwd(password))
