@@ -25,8 +25,9 @@ def check_pwd(password):
             number_check = 1
 
     # https://stackoverflow.com/questions/20002503/why-does-a-x-or-y-or-z-always-evaluate-to-true
-    # referenced this to condense ugly list of code
-    if {lowercase_check, uppercase_check, symbol_check, number_check} == 0:
+    # https://stackoverflow.com/questions/15112125/how-to-test-multiple-variables-for-equality-against-a-single-value
+    # referenced these to condense ugly list of code, glad I learned this ! :)
+    if 0 in {lowercase_check, uppercase_check, symbol_check, number_check}:
         return False
 
     else:
