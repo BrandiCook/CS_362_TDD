@@ -47,7 +47,6 @@ class Test_Password_Validator(TestCase):
         password = "12345678"
         self.assertFalse(check_pwd(password))
 
-
 """
 
     def test_combo(self):

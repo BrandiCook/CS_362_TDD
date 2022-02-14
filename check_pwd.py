@@ -26,7 +26,7 @@ def check_pwd(password):
 
     # https://stackoverflow.com/questions/20002503/why-does-a-x-or-y-or-z-always-evaluate-to-true
     # referenced this to condense ugly list of code
-    if {lowercase_check, uppercase_check, symbol_check, number_check} == 0:
+    if {lowercase_check or uppercase_check or symbol_check or number_check} == 0:
         return False
 
     else:
