@@ -6,6 +6,7 @@ import unittest
 from unittest import TestCase
 from check_pwd import check_pwd
 
+
 # Class definition
 
 # Must be between 8 and 20 characters (inclusive)
@@ -15,8 +16,10 @@ from check_pwd import check_pwd
 # Must contain at least one symbol from: ~`!@#$%^&*()_+-= (copy and paste to avoid missing characters) These are the only permitted symbols
 
 class Test_Password_Validator(TestCase):
-    pass
+    def test_empty(self):
+        password = ""
+        self.assertFalse(check_pwd(password))
 
 
 if __name__ == '__main__':
-        unittest.main()
+    unittest.main()
