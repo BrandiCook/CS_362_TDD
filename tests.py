@@ -29,14 +29,18 @@ class Test_Password_Validator(TestCase):
         password = "abcdefghijklmnopqrstu"
         self.assertFalse(check_pwd(password))
 
+    # made false because not contain lowercase
     def test_uppercase(self):
         password = "ABCDEFGH"
-        self.assertTrue(check_pwd(password))
+        self.assertFalse(check_pwd(password))
 
+
+"""
+    # made false because not contain uppercase
     def test_lowercase(self):
         password = "abcdefgh"
         self.assertTrue(check_pwd(password))
-
+        
     def test_symbols(self):
         password = "~`!@#$%^&*()_+-="  # 16 chars
         self.assertTrue(check_pwd(password))
@@ -48,7 +52,7 @@ class Test_Password_Validator(TestCase):
     def test_combo(self):
         password = "abcdef123!"
         self.assertTrue(check_pwd(password))
-
+"""
 
 if __name__ == '__main__':
     unittest.main()
