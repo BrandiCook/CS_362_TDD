@@ -45,6 +45,10 @@ class Test_Password_Validator(TestCase):
         password = "12345678"
         self.assertTrue(check_pwd(password))
 
+    def test_combo(self):
+        password = "abcdef123!"
+        self.assertTrue(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
