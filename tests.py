@@ -37,6 +37,10 @@ class Test_Password_Validator(TestCase):
         password = "abcdefgh"
         self.assertTrue(check_pwd(password))
 
+    def test_symbols(self):
+        password = "~`!@#$%^&*()_+-="  # 16 chars
+        self.assertTrue(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
