@@ -8,7 +8,9 @@ def check_pwd(password):
         value = False
         if j.islower():
             value = True
-
+        if j.isupper():
+            value = True
+        return value
     if not value:
         return False
 
