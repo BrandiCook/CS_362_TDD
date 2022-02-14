@@ -43,11 +43,12 @@ class Test_Password_Validator(TestCase):
         password = "~`!@#$%^&*()_+-="  # 16 chars
         self.assertFalse(check_pwd(password))
 
-
-"""
     def test_nums(self):
         password = "12345678"
-        self.assertTrue(check_pwd(password))
+        self.assertFalse(check_pwd(password))
+
+
+"""
 
     def test_combo(self):
         password = "abcdef123!"
