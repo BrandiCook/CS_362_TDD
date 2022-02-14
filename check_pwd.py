@@ -12,4 +12,3 @@ def check_pwd(password):
     if not value:
         return False
 
-    return value
