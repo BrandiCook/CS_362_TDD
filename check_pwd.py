@@ -8,7 +8,7 @@ def check_pwd(password):
     symbols = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*',
                '(', ')', '_', '+', '-', '=']
 
-    if len(password) > 8 or len(password) > 20:
+    if len(password) < 8 or len(password) > 20:
         return False
 
     # since it only needs at LEAST one, and not exactly one, I can let if return True if anything other than 0
