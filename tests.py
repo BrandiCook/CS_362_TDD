@@ -37,7 +37,7 @@ class Test_Password_Validator(TestCase):
     # made false because not contain uppercase
     def test_lowercase(self):
         password = "abcdefgh"
-        self.assertTrue(check_pwd(password))
+        self.assertFalse(check_pwd(password))
 
 
 """  
