@@ -1,6 +1,4 @@
 def check_pwd(password):
-    value = True
-    value2 = True
 
     if len(password) > 8 or len(password) > 20:
         return False
@@ -15,11 +13,12 @@ def check_pwd(password):
         if j.isupper():
             value2 = True
 
-        if value and value2:
-            return True
+        if not value and not value2:
+            return False
+
         else:
             return False
-    
-    if not value:
+
+    else:
         return False
 
