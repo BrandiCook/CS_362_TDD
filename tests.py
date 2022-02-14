@@ -2,6 +2,10 @@
 # 93309286
 # TDD Hands On, A2, Due 2/14/2022
 
+##########################################
+# https://github.com/BrandiCook/CS_362_TDD
+##########################################
+
 import unittest
 from unittest import TestCase
 from check_pwd import check_pwd
@@ -47,12 +51,10 @@ class Test_Password_Validator(TestCase):
         password = "12345678"
         self.assertFalse(check_pwd(password))
 
-"""
-
-    def test_combo(self):
-        password = "abcdef123!"
+    def test_acceptable_password(self):
+        password = "Abcdef123!"  # 10 chars, one upper, >= 1 lower, >=1 number, >= 1 symbol
         self.assertTrue(check_pwd(password))
-"""
+
 
 if __name__ == '__main__':
     unittest.main()
